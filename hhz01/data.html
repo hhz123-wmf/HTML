@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>css样式添加</title>
+
+		<link rel="stylesheet" href="css/dateTime.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<style type="text/css">
+	
+
+	</style>
+	<body>
+
+		<div style="margin-left: 100px;">
+			
+			<div class="head" id="head">
+				<div>LOGO</div>
+			 <br>
+			      <table border="1" bordercolor="white" align="center"  cellspacing="0" >
+			        <tr>
+					<td style="background: #E2E2E2;text-indent: 6em;">&nbsp;&nbsp;</td>
+			          <td   ><input class="radio_type" type="radio" name="type" />Introduction</td>
+			          <td ><input class="radio_type" type="radio" name="type"  />Company</td>
+			          <td  style="background: #FF0000;color: #FFFFFF;"><input class="radio_type" type="radio" name="type" checked />About You</td>
+			          <td ><input class="radio_type" type="radio" name="type" />Trust</td>
+			          <td ><input class="radio_type" type="radio" name="type" />Foreign Tax</td>
+			       <td class="gray">&nbsp;&nbsp;</td>
+					</tr>
+			      </table>
+			   
+			</div>
+			
+			<label style="color: red;font-size: 6px;">STEPT HREE</label><br />
+			<label style="size: 24px;"><strong>About You</strong></label>
+
+			<br />
+			<br />
+			<form style="width: 900px;height: 900px;">
+				<div>
+					<span style="">PERSONAL DETAILS：</span>
+
+					<label for="nation">
+						<input type="text" list="Nation" placeholder="Nationality">
+						<datalist id="Nation">
+							<option value="National"></option>
+							<option value="China"></option>
+							<option value="America"></option>
+						</datalist>
+					</label>
+
+
+					<label>
+						<input type="text" list="Title" placeholder="Title">
+						<datalist id="Title">
+							<option value="Title1"></option>
+							<option value="theme2"></option>
+						</datalist>
+
+					</label>
+
+					<label>
+						<input type="text" list="gender" placeholder="Gender">
+						<datalist id="gender">
+							<option value="male"></option>
+							<option value="female"></option>
+						</datalist>
+
+					</label>
+				</div><br>
+				<div style="text-indent: 10.8em;">
+
+					<label><input type="text" name="username" class="width" placeholder="Given Nmae" /></label>
+					<!-- <label><input type="text" name="username" class="width" placeholder="Middle Nerre" /></label> -->
+
+					<label><input style="border-top:0;border-left:0;border-right:0;" type="text" placeholder="Middle Name" /></label>
+					<label><input type="text" name="username" class="width" placeholder="Surname" /></label>
+
+				</div>
+
+				<!-- 日期 -->
+				<div class="mycontainer" style="text-indent: 10.8em;">
+					<input type="text" placeholder="Date of Birth" id="date">
+					<input type="text" placeholder="Place of Birth">
+
+				</div>
+				<br>
+				<hr>
+				<br />
+				<div class="item">
+					<span>CONTACT DETAILS：</span>
+					<label><input style="border-top:0;border-left:0;border-right:0;" type="text" name="username" class="width"
+						 placeholder="Emali" /></label>
+					<label><input type="text" name="username" class="width" placeholder="Mobile" /></label>
+					<label><input type="text" name="username" class="width" placeholder="Other Phone" /></label>
+				</div>
+				<br>
+				<br>
+				<hr>
+				<br>
+				<div class="item">
+					<span>ADDRESS DETAILS：</span>
+
+					<input type="text" placeholder="Residential Address">
+					<div style="text-indent: 10.2em;">
+						
+						<input type="text" placeholder="Postal Address">
+						<label><input class="check" type="checkbox" name="like" value="2">Same as residential address</label>
+						<br>
+					</div>
+					<br />
+					<div style="text-indent: 10em;">
+						<input type="radio" class="radio_type" name="years" value="more" checked >More than 3 years
+						<input type="radio" class="radio_type" name="years" value="less">Less than 3 years
+					</div>
+				</div>
+				<br>
+				<br>
+				<hr>
+				<br>
+					<span>ADDRESS DETAILS：</span>
+					<input type="text" placeholder="Residential Address">
+					<br />
+					<div style="text-indent: 10.2em;">
+						<input type="text" placeholder="Postal Address">
+						<label><input type="checkbox"  name="like" value="2" checked>Same as residential address</label>
+						<br>
+					</div>
+
+				
+				<br><br>
+				<p align="right">
+					<input type="submit" value="Continue →" class="top">
+				</p>
+			</form>
+		</div>
+		
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/dateTime.min.js"></script>
+		<script type="text/javascript">
+			$("#date").datetime({
+				type: "date",
+				value: [2019, 9, 31],
+				success: function(res) {
+					console.log(res)
+				}
+			})
+		</script>
+
+	</body>
+</html>
